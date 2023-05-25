@@ -1,6 +1,6 @@
 package com.usuarios.apiusuarios.entity;
 
-import java.util.Date;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EntityListeners;
@@ -8,7 +8,6 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
-import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 import com.usuarios.apiusuarios.entity.Person;
 
@@ -24,9 +23,16 @@ public class Person {
     @Column(name = "DNI")
     private String dni;
 
+    @Column(name = "nom")
     private String nombre;
+
+    @Column(name = "ap")
     private String apellidos;
+
+    @Column(name = "us")
     private String usuario;
+
+    @Column(name = "pas")
     private String contraseña;
 
     public Person() {
